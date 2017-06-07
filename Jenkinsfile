@@ -4,6 +4,7 @@ pipeline {
     stage('aaa') {
       steps {
         sh 'echo "aa"'
+        input(message: 'fafafa', id: 'aa', submitter: 'afa', submitterParameter: 'aaa', ok: 'a')
       }
     }
     stage('aa') {
@@ -15,6 +16,12 @@ pipeline {
           },
           "vv": {
             sh 'ls'
+            
+          },
+          "": {
+            sh 'echo ""'
+            echo 'aaaa'
+            readFile '/'
             
           }
         )
